@@ -18,20 +18,21 @@ app.service('parseService', function($http){
   
   //postData method here
   
-  postData: function (message) {
-    return $http({
-      method: 'POST',
-      url: "http://api.parse.com/1/classes/chat"
-      data: {
-        text: message
-    }
-    });
-    return $http.post("http://api.parse.com/1/classes/chat", {test message});
+  postData: function(message) {
+//    return $http({
+//      method: 'POST',
+//      url: "http://api.parse.com/1/classes/chat"
+//      data: {
+//        text: message
+//    }
+//    });
+    return $http.post("https://api.parse.com/1/classes/chat", {text: message});
   },
     
   
   //getData method here
     getData: function(){
-      return $http.get("http://api.parse.com/1/classes/chat?order=-createdAt"
-    }
-});
+      return $http.get("https://api.parse.com/1/classes/chat?order=-createdAt"
+    };
+  };
+};
