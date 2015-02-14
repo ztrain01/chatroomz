@@ -1,6 +1,16 @@
 var app = angular.module('chatroom');
 
 app.service('parseService', function($http){
+  
+  this.getData = function() {
+    var deferred = $q.defer();
+    $http({
+    method: 'GET',
+      url: 'http://reqr.es/api/users?page=1'
+    }).then(function(response){
+      deferred.resolve(response.data.data);
+    }, function(err);
+    });
   //Here you'll need to create two methods. One called postData and the other called getData.
   
   //On the lines below create a getData method. This method will retrieve data from the parse backend.
