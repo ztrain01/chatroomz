@@ -14,6 +14,7 @@ app.controller('mainCtrl', function($scope, parseService, $interval){
   });
 };
 
+  
   $scope.getParseData();
   $interval($scope.getParseData, 1500);
 });
