@@ -7,7 +7,7 @@ app.service('parseService', function($http){
   },
   this.getData = function(){
     return $http.get("https://api.parse.com/1/classes/chat?order=-createdAt"
-    )};
+  )};
 });
   
   //Here you'll need to create two methods. One called postData and the other called getData.
